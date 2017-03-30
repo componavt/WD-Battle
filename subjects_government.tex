@@ -1,0 +1,27 @@
+\section{Формы правления стран}
+
+Построим пузырьковую диаграмму форм правления стран.
+
+\begin{itemize}
+    \item Объект: \href{https://www.wikidata.org/wiki/Q6256}{страна (Q6256)},
+    \item Свойство: \href{https://www.wikidata.org/wiki/Property:P122}{форма правления (P122)}.
+\end{itemize}
+
+\begin{lstlisting}[language=SPARQL]
+#basic form of government ranking
+#defaultView:BubbleChart
+SELECT ?bfog ?form (count(*) as ?count)
+WHERE 
+{
+    ?country wdt:P31 wd:Q6256.  #country
+    ?country wdt:P122 ?bfog .   #basic form of government
+    OPTIONAL {
+		?bfog rdfs:label ?form
+		filter (lang(?form) = "en")
+	}
+}
+GROUP BY ?bfog ?form
+ORDER BY DESC(?count) ASC(?form)
+\end{lstlisting}
+
+\href{https://query.wikidata.org/#%23basic%20form%20of%20government%20ranking%0A%23defaultView%3ABubbleChart%0ASELECT%20%3Fbfog%20%3Fform%20%28count%28%2a%29%20as%20%3Fcount%29%0AWHERE%20%0A%7B%0A%20%20%20%20%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%0A%20%20%20%20%3Fcountry%20wdt%3AP122%20%3Fbfog%20.%0A%20%20%20%20OPTIONAL%20%7B%0A%09%09%3Fbfog%20rdfs%3Alabel%20%3Fform%0A%09%09filter%20%28lang%28%3Fform%29%20%3D%20%22en%22%29%0A%09%7D%0A%7D%0AGROUP%20BY%20%3Fbfog%20%3Fform%0AORDER%20BY%20DESC%28%3Fcount%29%20ASC%28%3Fform%29%0A}{SPARQL-запрос}, 31 запись.

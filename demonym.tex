@@ -1,0 +1,71 @@
+\section{Этнохоронимы на русском языке}
+
+Построим список стран у которых есть этнохоронимы на русском языке
+
+\begin{itemize}
+    \item Объект: \href{https://www.wikidata.org/wiki/Q6256}{страна (Q6256)},
+    \item Свойство: \href{https://www.wikidata.org/wiki/Property:P1549}{этнохороним (P1549)}.
+\end{itemize}
+
+
+\begin{lstlisting}[language=SPARQL]
+#List of countries with demonyms in Russian
+SELECT ?country ?countryLabel 
+WHERE
+{
+	?country wdt:P31 wd:Q6256.       #country
+	?country wdt:P1549 ?demonym .    #demonym
+	FILTER((LANG(?demonym)) = "ru")
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
+}
+
+GROUP BY ?country ?countryLabel
+\end{lstlisting}
+
+\href{https://query.wikidata.org/#%23List%20of%20countries%20with%20demonym%20on%20russian%20language%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%0AWHERE%0A%7B%0A%09%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%20%20%20%20%20%20%20%23country%0A%09%3Fcountry%20wdt%3AP1549%20%3Fdemonym%20.%20%20%20%20%23demonym%0A%09FILTER%28%28LANG%28%3Fdemonym%29%29%20%3D%20%22ru%22%29%0A%09SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22ru%22%20%7D%0A%7D%0A%0AGROUP%20BY%20%3Fcountry%20%3FcountryLabel}{SPARQL-запрос}, 28 записей.
+
+На 19 марта 2017 года Викиданные содежат 28 из 198 стран с заполненными этнохоронимами.
+
+\subsection{Список этнохоронимов}
+
+Выведем список всех этнохоронимом на русском языке
+\begin{lstlisting}[language=SPARQL]
+#List of demonyms in Russian
+SELECT ?country ?countryLabel ?demonym
+WHERE
+{
+	?country wdt:P31 wd:Q6256.      #country
+	?country wdt:P1549 ?demonym .   #demonym
+	FILTER((LANG(?demonym)) = "ru")
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
+}
+\end{lstlisting}
+
+\href{https://query.wikidata.org/#%23List%20of%20demonym%20on%20russian%20language%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fdemonym%0AWHERE%0A%7B%0A%09%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%20%20%20%20%20%20%23country%0A%09%3Fcountry%20wdt%3AP1549%20%3Fdemonym%20.%20%20%20%23demonym%0A%09FILTER%28%28LANG%28%3Fdemonym%29%29%20%3D%20%22ru%22%29%0A%09SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22ru%22%20%7D%0A%7D}{SPARQL-запрос}, 83 записей.
+
+На 19 марта 2017 года Викиданные содежат 83 заполненных этнохоронима.
+
+\subsection{Страны с незаполненными этнохоронимами}
+
+Построим список стран, у которых нет этнохоронимов на русском языке
+
+\begin{lstlisting}[language=SPARQL]
+#List of countries without demonyms in Russian
+SELECT ?country ?countryLabel 
+WHERE
+{
+	?country wdt:P31 wd:Q6256.              # country
+	MINUS { ?country wdt:P1549 ?demonym.    # except with demonyms
+            FILTER((LANG(?demonym)) = "ru") # in Russian
+          }    
+    
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
+}
+GROUP BY ?country ?countryLabel
+\end{lstlisting}
+
+\href{https://query.wikidata.org/#%23List%20of%20countries%20without%20demonyms%20in%20Russian%20language%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%0AWHERE%0A%7B%0A%09%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20country%0A%09MINUS%20%7B%20%3Fcountry%20wdt%3AP1549%20%3Fdemonym.%20%20%20%20%23%20except%20with%20demonyms%0A%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28%28LANG%28%3Fdemonym%29%29%20%3D%20%22ru%22%29%20%23%20in%20Russian%0A%20%20%20%20%20%20%20%20%20%20%7D%20%20%20%20%0A%20%20%20%20%0A%09SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22ru%22%20%7D%0A%7D%0AGROUP%20BY%20%3Fcountry%20%3FcountryLabel SPARQL query}{SPARQL-запрос}, 170 записей. 
+
+На 19 марта 2017 года Викиданные содежат 170 из 198 стран с незаполненными этнохоронимами.
+
+После заполнения авторами статьи этнохоронимов, число стран, у которых их нет на русском языке стало 69, а самих этнохоронимов на русском теперь языке 276 (на 20 марта 2017 года)

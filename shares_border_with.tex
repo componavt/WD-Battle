@@ -1,0 +1,24 @@
+\section{Соседние страны.}
+
+Построим граф соседних стран.
+
+\begin{itemize}
+    \item Объект: \href{https://www.wikidata.org/wiki/Q6256}{страна (Q6256)},
+    \item Свойство: \href{https://www.wikidata.org/wiki/Property:P47}{имеет границы с (P47)}.
+\end{itemize}
+
+\begin{lstlisting}[language=SPARQL]
+#neighboring countries graph
+#defaultView:Graph
+SELECT ?country ?countryLabel ?sharesBorderWith ?sharesBorderWithLabel
+WHERE
+{
+    ?country wdt:P31 wd:Q6256.                         #countries
+
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
+    OPTIONAL { ?country wdt:P47 ?sharesBorderWith . }  #shares border with
+}
+\end{lstlisting}
+
+\href{https://query.wikidata.org/#%23neighboring%20countries%20graph%0A%23defaultView%3AGraph%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3FsharesBorderWith%20%3FsharesBorderWithLabel%0AWHERE%0A%7B%0A%20%20%20%20%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%0A%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20%7D%0A%20%20%20%20OPTIONAL%20%7B%20%3Fcountry%20wdt%3AP47%20%3FsharesBorderWith%20.%20%7D%0A%0A%7D%0A%0A}{SPARQL-запрос}, 787 записей.
+
