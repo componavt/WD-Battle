@@ -8,6 +8,14 @@
 \end{itemize}
 
 \begin{lstlisting}[language=SPARQL]
+#List of `instances of` "battles" 
+SELECT ?battle ?battleLabel
+WHERE
+{
+    ?battle wdt:P31 wd:Q178561.
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
+}
+}</source>
 
 \end{lstlisting}
 
