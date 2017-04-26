@@ -1,4 +1,4 @@
-\subsection{Полнота Викиданных}
+
 \begin{itemize}
     \item По данным "Общероссийского классификатора стран мира" на земле существует 251 страна.
     \item В этой задаче не учитываются древние, уже не существующие государства (например: \href{https://www.wikidata.org/wiki/Q41137}{Ассирия (Q41137)}), поскольку они являются экземпляром не объекта "country", а объекта "former country" (бывшие страны). Отметим, что количество бывших стран на порядок больше существующих ныне стран (см. \href{https://query.wikidata.org/#SELECT%20%3Fitem%20%3Flabel%20%3F_image%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ3024240.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%0A%20%20%20%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20.%20%0A%20%20%20%20%3Fitem%20rdfs%3Alabel%20%3Flabel%0A%20%20%7D%0A%20%20%0AOPTIONAL%20%7B%20%3Fitem%20wdt%3AP18%20%3F_image.%20%7D%0A%7D%0A}{SPARQL-запрос}, возвращающий более двух тысяч таких стран).
