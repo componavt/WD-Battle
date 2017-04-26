@@ -21,7 +21,17 @@ WHERE
 }
 \end{lstlisting}
 
+Cписок войн с заполненными данными в поле "coordinate location": SPARQL query 35 Results
 
+#List of war with 'coordinate location' 
+#defaultView:Map
+SELECT ?war ?warLabel ?location
+WHERE
+{
+  ?war wdt:P31 wd:Q198. #instance of war
+  ?war wdt:P625 ?location #display location
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en"}
+}
 \begin{itemize}
     \item Объект: \href{https://www.wikidata.org/wiki/Q6256}{страна (Q6256)},
     \item Свойство: \href{https://www.wikidata.org/wiki/Property:P571}{дата основания (P571)}.
