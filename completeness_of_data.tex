@@ -39,13 +39,3 @@ WHERE
 
 \href{https://query.wikidata.org/#%23List%20of%20war%20with%20%27coordinate%20location%27%20%0A%23defaultView%3AMap%0ASELECT%20%3Fwar%20%3FwarLabel%20%3Flocation%0AWHERE%0A%7B%0A%20%20%3Fwar%20wdt%3AP31%20wd%3AQ198.%20%23instance%20of%20war%0A%20%20%3Fwar%20wdt%3AP625%20%3Flocation%20%23display%20location%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%7D%0A%7D}{SPARQL query} 35 Results
 
-\begin{itemize}
-    \item Объект: \href{https://www.wikidata.org/wiki/Q6256}{страна (Q6256)},
-    \item Свойство: \href{https://www.wikidata.org/wiki/Property:P571}{дата основания (P571)}.
-\end{itemize}
-
-
-
-\href{https://query.wikidata.org/#%23List%20of%20%60instances%20of%60%20%22countries%20without%20a%20inception%22%20%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%0AWHERE%0A%7B%0A%20%20%20%20%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%20%23country%0A%20%20%20%20%0A%20%20%20%20MINUS%20%7B%20%3Fcountry%20wdt%3AP571%20%5B%5D%20%7D%20.%20%23inception%20of%20country%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20%7D%0A%7D%0A%0A}{SPARQL-запрос}, 100 записей.
-
-Итак, на 6 марта 2017 года Викиданные содержат 100 из 198 записей о ныне существующих странах с неизвестным годом основания страны.
