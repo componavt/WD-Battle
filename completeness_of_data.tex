@@ -14,17 +14,7 @@ Cписок битв с заполненными данными в поле "coo
     \item Свойство: \href{https://www.wikidata.org/wiki/Property:P571}{дата основания (P571)}.
 \end{itemize}
 
-\begin{lstlisting}[language=SPARQL]
-#List of `instances of` "countries without an inception" 
-SELECT ?country ?countryLabel 
-WHERE
-{
-    ?country wdt:P31 wd:Q6256.       #country
-    
-    MINUS { ?country wdt:P571 [] } . #inception of country
-    SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
-}
-\end{lstlisting}
+
 
 \href{https://query.wikidata.org/#%23List%20of%20%60instances%20of%60%20%22countries%20without%20a%20inception%22%20%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%0AWHERE%0A%7B%0A%20%20%20%20%3Fcountry%20wdt%3AP31%20wd%3AQ6256.%20%23country%0A%20%20%20%20%0A%20%20%20%20MINUS%20%7B%20%3Fcountry%20wdt%3AP571%20%5B%5D%20%7D%20.%20%23inception%20of%20country%0A%20%20%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%20%7D%0A%7D%0A%0A}{SPARQL-запрос}, 100 записей.
 
