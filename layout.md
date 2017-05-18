@@ -10,3 +10,4 @@ d8c1.html
 figures/Cписок войн с заполненными данными в поле coordinate location/Cписок войн с заполненными данными в поле coordinate location.png
 a0d9.html
 figures/Cписок битв без точной геопривязки, но c указанием coordinate location1/Cписок битв без точной геопривязки, но c указанием coordinate location1.png
+14e3a.html
