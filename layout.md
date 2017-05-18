@@ -4,4 +4,5 @@ instancelist.tex
 age_of_contries.tex
 completeness_of_data.tex
 b849.tex
+figures/Cписок битв с заполненными данными в поле coordinate location2/Cписок битв с заполненными данными в поле coordinate location2.png
 d8c1.html
