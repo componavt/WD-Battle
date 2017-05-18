@@ -1,4 +1,3 @@
-figures/Cписок битв без точной геопривязки, но c указанием coordinate location/Cписок битв без точной геопривязки, но c указанием coordinate location.png
 1729a.html
 abstract.tex
 remark.tex
