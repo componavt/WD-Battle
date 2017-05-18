@@ -12,3 +12,4 @@ a0d9.html
 figures/Cписок битв без точной геопривязки, но c указанием coordinate location1/Cписок битв без точной геопривязки, но c указанием coordinate location1.png
 14e3a.html
 figures/Cписок войн без точной геопривязки, но c указанием coordinate location/Cписок войн без точной геопривязки, но c указанием coordinate location.png
+1438e.html
