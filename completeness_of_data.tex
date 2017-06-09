@@ -77,6 +77,7 @@ SELECT ?battleLabel ?location ?_coordinate_location WHERE {
 Сравнивавая рис.~\ref{136121} и рис.~\ref{420168}, видим, что битв с географической привязкой и локацией больше всего в Европе, несмотря на то, что обнаружено относительно малое число битв, происходивших в США, у которых заполнено свойство "location" (по сравнению с числом битв, у которых указано свойство "coordinate location" см. рис.~\ref{136121}). Возможно, что в те годы, когда происходили такие битвы, как война за независимость, войны чикамога, было мало населённых пунктов.
 
 \item{Cписок войн без точной геопривязки, но c указанием "coordinate location" того объекта, который указан в поле "location" (см. рис.~\ref{379908}):} 
+\begin{lstlisting}[language=SPARQL]
 #List of war with 'coordinate location' for 'location'
 #defaultView:Map
 SELECT ?warLabel ?location ?_coordinate_location
