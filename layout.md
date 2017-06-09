@@ -14,3 +14,4 @@ figures/cor_v/cor_v.png
 figures/loc_b1/loc_b1.png
 8icsl8no4h8.html
 adoj77tov3o.html
+figures/loc_v/loc_v.png
