@@ -4,6 +4,8 @@ remark.tex
 instancelist.tex
 age_of_contries.tex
 completeness_of_data.tex
+figures/cor_b4/cor_b4.png
+j2hufp7bkn8.tex
 figures/cor_b2/cor_b2.png
 o3l0vt9iqbo.tex
 b849.tex
