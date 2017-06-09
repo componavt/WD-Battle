@@ -10,7 +10,7 @@
 \textbf{Гипотеза.} У войн будет указанно координат меньше (относительно полного числа войн, в процентах), чем у битв, поскольку война - это обычно что-то более протяжённое во времени и пространстве.
 
 \begin{itemize}
-\item{Cписок битв с заполненными данными в поле "coordinate location" (См. Рис.~\ref{136121}):}
+\item{Cписок битв с заполненными данными в поле "coordinate location" (См. рис.~\ref{136121}):}
 \begin{lstlisting}[language=SPARQL ]
 #List of battle with 'coordinate location' 
 #defaultView:Map
@@ -25,7 +25,7 @@ WHERE
 
 \href{https://query.wikidata.org/#%23List%20of%20battle%20with%20%27coordinate%20location%27%20%0A%23defaultView%3AMap%0ASELECT%20%3Fbattle%20%3FbattleLabel%20%3Flocation%0AWHERE%0A%7B%0A%20%20%3Fbattle%20wdt%3AP31%20wd%3AQ178561.%20%23instance%20of%20battle%0A%20%20%3Fbattle%20wdt%3AP625%20%3Flocation%20%23display%20location%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22%7D%0A%7D}{SPARQL-запрос}, 4628 записей.
 
-Вывод по рис.1~\ref{136121}: большинство битв происходило Европе и бассейне Средиземного моря, а также в восточной части Соединённых Штатов Америки.
+Вывод по рис.~\ref{136121}: большинство битв происходило Европе и бассейне Средиземного моря, а также в восточной части Соединённых Штатов Америки.
 
 \item{Cписок войн с заполненными данными в поле "coordinate location":} 
 
