@@ -8,7 +8,6 @@ j2hufp7bkn8.tex
 figures/cor_b2/cor_b2.png
 o3l0vt9iqbo.tex
 b849.tex
-figures/cor_b/cor_b.png
 d8c1.html
 a0d9.html
 figures/cor_v/cor_v.png
