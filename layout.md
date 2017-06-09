@@ -5,6 +5,7 @@ instancelist.tex
 age_of_contries.tex
 completeness_of_data.tex
 b849.tex
+figures/cor_b/cor_b.png
 d8c1.html
 a0d9.html
 14e3a.html
