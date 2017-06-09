@@ -9,5 +9,4 @@ figures/cor_b/cor_b.png
 d8c1.html
 a0d9.html
 14e3a.html
-figures/loc_b/loc_b.png
 1438e.html
